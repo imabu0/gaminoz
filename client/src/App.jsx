@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Main, Routes, Route } from "react-router-dom";
+import { Auth } from "./components/Auth/Auth";
 import Freepage from "./components/Pages/Freepage";
 import Actionpage from "./components/Pages/Actionpage";
 import Adventurepage from "./components/Pages/Adventurepage";
@@ -20,10 +21,10 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <Main>
-      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/auth" element={<Auth />} />
         <Route path="/freepage" element={<Freepage />} />
         <Route path="/actionpage" element={<Actionpage />} />
         <Route path="/adventurepage" element={<Adventurepage />} />
@@ -37,7 +38,6 @@ function App() {
         <Route path="/termspage" element={<Termspage />} />
         <Route path="/contactpage" element={<Contactpage />} />
       </Routes>
-      <Footer />
     </Main>
   );
 }
